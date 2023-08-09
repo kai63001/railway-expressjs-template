@@ -1,6 +1,6 @@
 ---
 title: ExpressJs server
-description: A simple ExpressJS server
+description: An express server with common examples
 tags:
   - http
   - nodejs
@@ -13,7 +13,7 @@ tags:
 
 This example starts an [Express JS](https://expressjs.com/) server.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/FZLQ6q?referralCode=ySCnWl)
+> [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/Q4mMOs?referralCode=wANn9j)
 
 ## 💁‍♀️ How to use locally
 
@@ -24,4 +24,16 @@ This example starts an [Express JS](https://expressjs.com/) server.
 
 The server started returns a plaintext message for the `/` route and a json message for the `/json` route.
 
-The server code is located in `index.js`.
+The main application code is located in `index.js`.
+
+### routes example folder
+
+> you should read the comments in the code to understand what is happening. check out the [expressjs documentation](https://expressjs.com/) for more information.
+> also, if this is your first time doing express, you should read the files in the order listed below.
+
+- `src` contains the source code for the server
+- `src/routes` contains the routes for the server
+- `src/routes/router_example.js` contains examples pertaining to expressjs routers
+- `src/routes/post.js` contains examples pertaining to http POST requests
+- `src/routes/params_example.js` contains examples pertaining to route parameters
+- `src/routes/middleware_example.js` contains examples pertaining to middleware
