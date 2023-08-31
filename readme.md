@@ -34,6 +34,3 @@ The main application code is located in `index.js`.
 - `src` contains the source code for the server
 - `src/routes` contains the routes for the server
 - `src/routes/router_example.js` contains examples pertaining to expressjs routers
-- `src/routes/post.js` contains examples pertaining to http POST requests
-- `src/routes/params_example.js` contains examples pertaining to route parameters
-- `src/routes/middleware_example.js` contains examples pertaining to middleware
