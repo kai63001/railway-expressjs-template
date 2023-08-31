@@ -13,14 +13,20 @@ app.use("/", ExampleRouter);
 // logging, or parsing the request body
 //
 // the example shown below will be for logging, and it is run on every request
-router.use((req, res, next) => {
+app.use((req, res, next) => {
   // try it out at http://localhost:3000/?query=hello+world and check the console
-  console.log({
-    method: req.method,
-    url: req.url,
-    query: req.query,
+  const start = Date.now();
+  res.on("finish", () => {
+    const responseTime = Date.now() - start;
+    const contentLength = res.get("Content-Length");
+    console.log({
+      method: req.method,
+      url: req.url,
+      query: req.query,
+      responseTime: `${responseTime}ms`,
+      contentLength: `${contentLength} bytes`,
+    });
   });
-
   // the next function is a callback that tells express to move on to the next middleware or route handler
   next();
 });
