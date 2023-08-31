@@ -25,6 +25,7 @@ app.use((req, res, next) => {
       query: req.query,
       responseTime: `${responseTime} ms`,
       contentLength: `${contentLength} bytes`,
+      status: res.statusCode,
     });
   });
   // the next function is a callback that tells express to move on to the next middleware or route handler
