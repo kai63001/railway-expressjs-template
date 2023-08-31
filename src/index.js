@@ -21,9 +21,9 @@ app.use((req, res, next) => {
     const contentLength = res.get("Content-Length");
     console.log({
       method: req.method,
-      url: req.url,
+      url: req.originalUrl,
       query: req.query,
-      responseTime: `${responseTime}ms`,
+      responseTime: `${responseTime} ms`,
       contentLength: `${contentLength} bytes`,
     });
   });
